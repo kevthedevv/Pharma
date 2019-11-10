@@ -120,6 +120,8 @@ namespace Pharmacy
             PharmaPOS pharmapos = new PharmaPOS();
             pharmapos.Show();
             this.Hide();
+            
+
         }
 
         private void button_Accounts_Click(object sender, EventArgs e)

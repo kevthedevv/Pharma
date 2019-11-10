@@ -37,27 +37,32 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBox_Discount = new System.Windows.Forms.ComboBox();
+            this.label_Change = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textbox_Cash = new System.Windows.Forms.TextBox();
             this.label_TotalDue = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label_Vatable = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label_SubTotal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label_Discounted = new System.Windows.Forms.Label();
             this.label_Discount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_ProceedToPayment = new System.Windows.Forms.Button();
+            this.button_FinishTransaction = new System.Windows.Forms.Button();
             this.label_Total = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button_POSProductInquiry = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button_POSNewTransaction = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label_BigSubTotal = new System.Windows.Forms.Label();
+            this.textbox_BigTotal = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.button_POSDiscountSettings = new System.Windows.Forms.Button();
             this.label_POSTransactionID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,7 +71,7 @@
             this.panel_ProductInquiry = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textbox_SearchProduct = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -86,11 +91,19 @@
             this.button_AddtoPOS = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textbox_DesiredQuantity = new System.Windows.Forms.TextBox();
+            this.panel_EditQuantity = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button_EditUpdateToPos = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.textbox_EditDesiredQuantity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_POS)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -104,6 +117,10 @@
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel_EditQuantity.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_POS
@@ -184,15 +201,21 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.Controls.Add(this.comboBox_Discount);
+            this.panel6.Controls.Add(this.label_Change);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.textbox_Cash);
             this.panel6.Controls.Add(this.label_TotalDue);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label_Vatable);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.label_SubTotal);
             this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label_Discounted);
             this.panel6.Controls.Add(this.label_Discount);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.button_ProceedToPayment);
+            this.panel6.Controls.Add(this.button_FinishTransaction);
             this.panel6.Controls.Add(this.label_Total);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(1094, 232);
@@ -200,23 +223,77 @@
             this.panel6.Size = new System.Drawing.Size(258, 524);
             this.panel6.TabIndex = 20;
             // 
+            // comboBox_Discount
+            // 
+            this.comboBox_Discount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Discount.FormattingEnabled = true;
+            this.comboBox_Discount.Location = new System.Drawing.Point(6, 70);
+            this.comboBox_Discount.Name = "comboBox_Discount";
+            this.comboBox_Discount.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Discount.TabIndex = 44;
+            this.comboBox_Discount.SelectedIndexChanged += new System.EventHandler(this.comboBox_Discount_SelectedIndexChanged);
+            // 
+            // label_Change
+            // 
+            this.label_Change.AutoSize = true;
+            this.label_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Change.ForeColor = System.Drawing.Color.White;
+            this.label_Change.Location = new System.Drawing.Point(192, 275);
+            this.label_Change.Name = "label_Change";
+            this.label_Change.Size = new System.Drawing.Size(40, 20);
+            this.label_Change.TabIndex = 43;
+            this.label_Change.Text = "0.00";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(4, 275);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 20);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "CHANGE:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "CASH:";
+            // 
+            // textbox_Cash
+            // 
+            this.textbox_Cash.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textbox_Cash.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Cash.Location = new System.Drawing.Point(7, 218);
+            this.textbox_Cash.Name = "textbox_Cash";
+            this.textbox_Cash.Size = new System.Drawing.Size(243, 46);
+            this.textbox_Cash.TabIndex = 40;
+            this.textbox_Cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textbox_Cash.TextChanged += new System.EventHandler(this.textbox_Cash_TextChanged);
+            // 
             // label_TotalDue
             // 
             this.label_TotalDue.AutoSize = true;
             this.label_TotalDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TotalDue.ForeColor = System.Drawing.Color.White;
-            this.label_TotalDue.Location = new System.Drawing.Point(191, 130);
+            this.label_TotalDue.Location = new System.Drawing.Point(191, 158);
             this.label_TotalDue.Name = "label_TotalDue";
-            this.label_TotalDue.Size = new System.Drawing.Size(58, 20);
+            this.label_TotalDue.Size = new System.Drawing.Size(40, 20);
             this.label_TotalDue.TabIndex = 39;
-            this.label_TotalDue.Text = "100.00";
+            this.label_TotalDue.Text = "0.00";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(3, 130);
+            this.label12.Location = new System.Drawing.Point(3, 158);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 20);
             this.label12.TabIndex = 38;
@@ -227,18 +304,18 @@
             this.label_Vatable.AutoSize = true;
             this.label_Vatable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Vatable.ForeColor = System.Drawing.Color.White;
-            this.label_Vatable.Location = new System.Drawing.Point(191, 101);
+            this.label_Vatable.Location = new System.Drawing.Point(191, 129);
             this.label_Vatable.Name = "label_Vatable";
-            this.label_Vatable.Size = new System.Drawing.Size(58, 20);
+            this.label_Vatable.Size = new System.Drawing.Size(40, 20);
             this.label_Vatable.TabIndex = 37;
-            this.label_Vatable.Text = "100.00";
+            this.label_Vatable.Text = "0.00";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 101);
+            this.label10.Location = new System.Drawing.Point(3, 129);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 20);
             this.label10.TabIndex = 36;
@@ -249,33 +326,45 @@
             this.label_SubTotal.AutoSize = true;
             this.label_SubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_SubTotal.ForeColor = System.Drawing.Color.White;
-            this.label_SubTotal.Location = new System.Drawing.Point(191, 74);
+            this.label_SubTotal.Location = new System.Drawing.Point(191, 102);
             this.label_SubTotal.Name = "label_SubTotal";
-            this.label_SubTotal.Size = new System.Drawing.Size(58, 20);
+            this.label_SubTotal.Size = new System.Drawing.Size(40, 20);
             this.label_SubTotal.TabIndex = 35;
-            this.label_SubTotal.Text = "100.00";
+            this.label_SubTotal.Text = "0.00";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 74);
+            this.label8.Location = new System.Drawing.Point(3, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 20);
             this.label8.TabIndex = 34;
             this.label8.Text = "SUB-TOTAL:";
+            // 
+            // label_Discounted
+            // 
+            this.label_Discounted.AutoSize = true;
+            this.label_Discounted.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Discounted.ForeColor = System.Drawing.Color.White;
+            this.label_Discounted.Location = new System.Drawing.Point(192, 74);
+            this.label_Discounted.Name = "label_Discounted";
+            this.label_Discounted.Size = new System.Drawing.Size(40, 20);
+            this.label_Discounted.TabIndex = 33;
+            this.label_Discounted.Text = "0.00";
+            this.label_Discounted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Discount
             // 
             this.label_Discount.AutoSize = true;
             this.label_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Discount.ForeColor = System.Drawing.Color.White;
-            this.label_Discount.Location = new System.Drawing.Point(191, 45);
+            this.label_Discount.Location = new System.Drawing.Point(192, 45);
             this.label_Discount.Name = "label_Discount";
-            this.label_Discount.Size = new System.Drawing.Size(58, 20);
+            this.label_Discount.Size = new System.Drawing.Size(40, 20);
             this.label_Discount.TabIndex = 33;
-            this.label_Discount.Text = "100.00";
+            this.label_Discount.Text = "0.00";
             // 
             // label2
             // 
@@ -288,21 +377,21 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "DISCOUNT:";
             // 
-            // button_ProceedToPayment
+            // button_FinishTransaction
             // 
-            this.button_ProceedToPayment.BackColor = System.Drawing.Color.Teal;
-            this.button_ProceedToPayment.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_ProceedToPayment.FlatAppearance.BorderSize = 0;
-            this.button_ProceedToPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ProceedToPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ProceedToPayment.ForeColor = System.Drawing.Color.White;
-            this.button_ProceedToPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_ProceedToPayment.Location = new System.Drawing.Point(0, 439);
-            this.button_ProceedToPayment.Name = "button_ProceedToPayment";
-            this.button_ProceedToPayment.Size = new System.Drawing.Size(258, 85);
-            this.button_ProceedToPayment.TabIndex = 31;
-            this.button_ProceedToPayment.Text = "PROCEED TO PAYMENT";
-            this.button_ProceedToPayment.UseVisualStyleBackColor = false;
+            this.button_FinishTransaction.BackColor = System.Drawing.Color.Teal;
+            this.button_FinishTransaction.FlatAppearance.BorderSize = 0;
+            this.button_FinishTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_FinishTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_FinishTransaction.ForeColor = System.Drawing.Color.White;
+            this.button_FinishTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_FinishTransaction.Location = new System.Drawing.Point(0, 439);
+            this.button_FinishTransaction.Name = "button_FinishTransaction";
+            this.button_FinishTransaction.Size = new System.Drawing.Size(258, 85);
+            this.button_FinishTransaction.TabIndex = 31;
+            this.button_FinishTransaction.Text = "FINISH TRANSACTION";
+            this.button_FinishTransaction.UseVisualStyleBackColor = false;
+            this.button_FinishTransaction.Click += new System.EventHandler(this.button_FinishTransaction_Click);
             // 
             // label_Total
             // 
@@ -311,9 +400,10 @@
             this.label_Total.ForeColor = System.Drawing.Color.White;
             this.label_Total.Location = new System.Drawing.Point(192, 16);
             this.label_Total.Name = "label_Total";
-            this.label_Total.Size = new System.Drawing.Size(58, 20);
+            this.label_Total.Size = new System.Drawing.Size(40, 20);
             this.label_Total.TabIndex = 14;
-            this.label_Total.Text = "100.00";
+            this.label_Total.Text = "0.00";
+            this.label_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -329,7 +419,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.panel20);
-            this.panel4.Controls.Add(this.panel14);
             this.panel4.Controls.Add(this.panel16);
             this.panel4.Location = new System.Drawing.Point(880, 131);
             this.panel4.Name = "panel4";
@@ -340,7 +429,7 @@
             // 
             this.panel20.Controls.Add(this.button_POSProductInquiry);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 126);
+            this.panel20.Location = new System.Drawing.Point(0, 63);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(203, 63);
             this.panel20.TabIndex = 16;
@@ -362,33 +451,6 @@
             this.button_POSProductInquiry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_POSProductInquiry.UseVisualStyleBackColor = false;
             this.button_POSProductInquiry.Click += new System.EventHandler(this.button_POSProductInquiry_Click);
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.button6);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 63);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(203, 63);
-            this.panel14.TabIndex = 15;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(203, 63);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "F6        Cancel Transaction";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel16
             // 
@@ -420,27 +482,29 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Teal;
-            this.panel3.Controls.Add(this.label_BigSubTotal);
+            this.panel3.Controls.Add(this.textbox_BigTotal);
             this.panel3.Location = new System.Drawing.Point(1094, 131);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 94);
             this.panel3.TabIndex = 18;
             // 
-            // label_BigSubTotal
+            // textbox_BigTotal
             // 
-            this.label_BigSubTotal.AutoSize = true;
-            this.label_BigSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_BigSubTotal.ForeColor = System.Drawing.Color.White;
-            this.label_BigSubTotal.Location = new System.Drawing.Point(127, 21);
-            this.label_BigSubTotal.Name = "label_BigSubTotal";
-            this.label_BigSubTotal.Size = new System.Drawing.Size(132, 55);
-            this.label_BigSubTotal.TabIndex = 12;
-            this.label_BigSubTotal.Text = "1100";
-            this.label_BigSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textbox_BigTotal.BackColor = System.Drawing.Color.Teal;
+            this.textbox_BigTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textbox_BigTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_BigTotal.ForeColor = System.Drawing.Color.Transparent;
+            this.textbox_BigTotal.Location = new System.Drawing.Point(44, 19);
+            this.textbox_BigTotal.Name = "textbox_BigTotal";
+            this.textbox_BigTotal.ReadOnly = true;
+            this.textbox_BigTotal.Size = new System.Drawing.Size(205, 55);
+            this.textbox_BigTotal.TabIndex = 13;
+            this.textbox_BigTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Teal;
+            this.panel12.Controls.Add(this.button_POSDiscountSettings);
             this.panel12.Controls.Add(this.label_POSTransactionID);
             this.panel12.Controls.Add(this.label4);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
@@ -449,6 +513,22 @@
             this.panel12.Size = new System.Drawing.Size(1366, 66);
             this.panel12.TabIndex = 17;
             // 
+            // button_POSDiscountSettings
+            // 
+            this.button_POSDiscountSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_POSDiscountSettings.FlatAppearance.BorderSize = 0;
+            this.button_POSDiscountSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_POSDiscountSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_POSDiscountSettings.ForeColor = System.Drawing.Color.White;
+            this.button_POSDiscountSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_POSDiscountSettings.Location = new System.Drawing.Point(1189, 12);
+            this.button_POSDiscountSettings.Name = "button_POSDiscountSettings";
+            this.button_POSDiscountSettings.Size = new System.Drawing.Size(163, 41);
+            this.button_POSDiscountSettings.TabIndex = 37;
+            this.button_POSDiscountSettings.Text = "Discounts Settings";
+            this.button_POSDiscountSettings.UseVisualStyleBackColor = false;
+            this.button_POSDiscountSettings.Click += new System.EventHandler(this.button_POSDiscountSettings_Click);
+            // 
             // label_POSTransactionID
             // 
             this.label_POSTransactionID.AutoSize = true;
@@ -456,9 +536,9 @@
             this.label_POSTransactionID.ForeColor = System.Drawing.Color.White;
             this.label_POSTransactionID.Location = new System.Drawing.Point(146, 26);
             this.label_POSTransactionID.Name = "label_POSTransactionID";
-            this.label_POSTransactionID.Size = new System.Drawing.Size(18, 20);
+            this.label_POSTransactionID.Size = new System.Drawing.Size(74, 20);
             this.label_POSTransactionID.TabIndex = 7;
-            this.label_POSTransactionID.Text = "1";
+            this.label_POSTransactionID.Text = "Waiting...";
             // 
             // label4
             // 
@@ -530,20 +610,21 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.textbox_SearchProduct);
             this.panel9.Location = new System.Drawing.Point(440, 17);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(263, 33);
             this.panel9.TabIndex = 31;
             // 
-            // textBox1
+            // textbox_SearchProduct
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 16);
-            this.textBox1.TabIndex = 0;
+            this.textbox_SearchProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textbox_SearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_SearchProduct.Location = new System.Drawing.Point(12, 9);
+            this.textbox_SearchProduct.Name = "textbox_SearchProduct";
+            this.textbox_SearchProduct.Size = new System.Drawing.Size(237, 16);
+            this.textbox_SearchProduct.TabIndex = 0;
+            this.textbox_SearchProduct.TextChanged += new System.EventHandler(this.textbox_SearchProduct_TextChanged);
             // 
             // label14
             // 
@@ -745,11 +826,112 @@
             this.textbox_DesiredQuantity.Text = "1";
             this.textbox_DesiredQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel_EditQuantity
+            // 
+            this.panel_EditQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_EditQuantity.Controls.Add(this.panel13);
+            this.panel_EditQuantity.Controls.Add(this.button_EditUpdateToPos);
+            this.panel_EditQuantity.Controls.Add(this.panel15);
+            this.panel_EditQuantity.Location = new System.Drawing.Point(534, 333);
+            this.panel_EditQuantity.Name = "panel_EditQuantity";
+            this.panel_EditQuantity.Size = new System.Drawing.Size(329, 259);
+            this.panel_EditQuantity.TabIndex = 37;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(327, 66);
+            this.panel13.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(291, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 20);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "X";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.textBox1);
+            this.panel14.Location = new System.Drawing.Point(440, 23);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(263, 33);
+            this.panel14.TabIndex = 31;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(12, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(237, 16);
+            this.textBox1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(93, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(130, 20);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "EDIT QUANTITY";
+            // 
+            // button_EditUpdateToPos
+            // 
+            this.button_EditUpdateToPos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_EditUpdateToPos.FlatAppearance.BorderSize = 0;
+            this.button_EditUpdateToPos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_EditUpdateToPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_EditUpdateToPos.ForeColor = System.Drawing.Color.White;
+            this.button_EditUpdateToPos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_EditUpdateToPos.Location = new System.Drawing.Point(63, 200);
+            this.button_EditUpdateToPos.Name = "button_EditUpdateToPos";
+            this.button_EditUpdateToPos.Size = new System.Drawing.Size(203, 41);
+            this.button_EditUpdateToPos.TabIndex = 35;
+            this.button_EditUpdateToPos.Text = "UPDATE";
+            this.button_EditUpdateToPos.UseVisualStyleBackColor = false;
+            this.button_EditUpdateToPos.Click += new System.EventHandler(this.button_EditUpdateToPos_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Controls.Add(this.textbox_EditDesiredQuantity);
+            this.panel15.Location = new System.Drawing.Point(63, 62);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(203, 131);
+            this.panel15.TabIndex = 34;
+            // 
+            // textbox_EditDesiredQuantity
+            // 
+            this.textbox_EditDesiredQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textbox_EditDesiredQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_EditDesiredQuantity.Location = new System.Drawing.Point(-12, 31);
+            this.textbox_EditDesiredQuantity.Name = "textbox_EditDesiredQuantity";
+            this.textbox_EditDesiredQuantity.Size = new System.Drawing.Size(224, 73);
+            this.textbox_EditDesiredQuantity.TabIndex = 0;
+            this.textbox_EditDesiredQuantity.Text = "1";
+            this.textbox_EditDesiredQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // PharmaPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.panel_EditQuantity);
             this.Controls.Add(this.panel_Quantity);
             this.Controls.Add(this.panel_ProductInquiry);
             this.Controls.Add(this.dataGridView_POS);
@@ -768,7 +950,6 @@
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -791,6 +972,13 @@
             this.panel5.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel_EditQuantity.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -808,8 +996,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button button_POSNewTransaction;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button button_POSProductInquiry;
@@ -818,7 +1004,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_POS_Close;
-        private System.Windows.Forms.Label label_BigSubTotal;
         private System.Windows.Forms.Label label_TotalDue;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label_Vatable;
@@ -827,7 +1012,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label_Discount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_ProceedToPayment;
+        private System.Windows.Forms.Button button_FinishTransaction;
         private System.Windows.Forms.Label label_POSTransactionID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView_POS;
@@ -850,9 +1035,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textbox_SearchProduct;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textbox_BigTotal;
+        private System.Windows.Forms.Label label_Change;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textbox_Cash;
+        private System.Windows.Forms.Button button_POSDiscountSettings;
+        private System.Windows.Forms.ComboBox comboBox_Discount;
+        private System.Windows.Forms.Label label_Discounted;
+        private System.Windows.Forms.Panel panel_EditQuantity;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button_EditUpdateToPos;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.TextBox textbox_EditDesiredQuantity;
     }
 }

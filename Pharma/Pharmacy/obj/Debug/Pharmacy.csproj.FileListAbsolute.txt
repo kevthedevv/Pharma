@@ -15,4 +15,6 @@ D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.csproj.GenerateResource.cache
 D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.exe
 D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.pdb
 D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.PharmaPOS.resources
-D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.Quantity.resources
+D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.Orders.resources
+D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.Add_Order.resources
+D:\Pharma\Pharma\Pharmacy\obj\Debug\Pharmacy.Discounts.resources

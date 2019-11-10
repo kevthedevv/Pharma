@@ -91,7 +91,7 @@
             this.label_AddProduct_close.Size = new System.Drawing.Size(20, 20);
             this.label_AddProduct_close.TabIndex = 7;
             this.label_AddProduct_close.Text = "X";
-            this.label_AddProduct_close.Click += new System.EventHandler(this.label_AddProduct_close_Click);
+          //  this.label_AddProduct_close.Click += new System.EventHandler(this.label_AddProduct_close_Click);
             // 
             // panel2
             // 
@@ -171,7 +171,7 @@
             this.GenericNametxt.Name = "GenericNametxt";
             this.GenericNametxt.Size = new System.Drawing.Size(255, 16);
             this.GenericNametxt.TabIndex = 0;
-            this.GenericNametxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           // this.GenericNametxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
@@ -274,7 +274,7 @@
             this.button_Inventory.TabIndex = 22;
             this.button_Inventory.Text = "ADD";
             this.button_Inventory.UseVisualStyleBackColor = false;
-            this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
+          // this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
             // 
             // button1
             // 
@@ -424,7 +424,7 @@
             this.Location = new System.Drawing.Point(200, 0);
             this.Name = "Add_Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Homepage_Load);
+           // this.Load += new System.EventHandler(this.Homepage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
